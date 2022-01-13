@@ -17,4 +17,11 @@ textarea {
 
 li {
     list-style-image: none;
+    list-style: none;
+}
+
+
+p {
+    text-align: center;
+    text-size-adjust:auto;
 }
