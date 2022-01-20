@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+
+@model CalculatorModel;
+
+<h2>Grade Calculator</h2>
+<form method="post">
+    <label>Assignments (min 0, Max 100):</label>
+    <input id="numAss" asp-for="Assignment"  max="100" min="0"/><br />
+    <label>Quizzes (min 0, Max 100): </label>
+    <input id="numQuiz" asp-for="Quiz" max="100" min="0"/><br />
+    <label>Intex (min 0, Max 100):</label>
+    <input id="numIntex" asp-for="Intex" max="100" min="0"/><br />
+    <label>Group Project (min 0, Max 100):</label>
+    <input id="numGroup" asp-for="Project" max="100" min="0"/><br />
+    <label>Exams (min 0, Max 100):</label>
+    <input id="numExam" asp-for="Exam" max="100" min="0"/><br />
+
+    <input id="btnSend" type="button" value="Calculate Final Grade" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+
+
+<script src="~/JS/FanMail.js"></script>
